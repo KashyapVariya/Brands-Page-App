@@ -1,0 +1,40 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "274cc7aa84961d999a946c409d62ad46"
+name = "brands-page"
+handle = "brands-page-11783"
+application_url = "https://dos-bored-stephanie-aaron.trycloudflare.com"
+embedded = true
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "https://shed-classical-assured-sees.trycloudflare.com/webhooks/app/scopes_update"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "https://shed-classical-assured-sees.trycloudflare.com/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_markets,write_content,write_files,write_markets,write_products"
+
+[auth]
+redirect_urls = [
+  "https://dos-bored-stephanie-aaron.trycloudflare.com/auth/callback",
+  "https://dos-bored-stephanie-aaron.trycloudflare.com/auth/shopify/callback",
+  "https://dos-bored-stephanie-aaron.trycloudflare.com/api/auth/callback"
+]
+
+[app_proxy]
+url = "https://dos-bored-stephanie-aaron.trycloudflare.com/app/api"
+subpath = "proxytest1"
+prefix = "apps"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
